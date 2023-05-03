@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+    <title>Carrito de Compras</title>
+</head>
+
+<body onload="cargarCarritoDesdeLocalStorage()">
+	<h1>Carrito de Compras</h1>
+	<p>Haga clic en un botón para agregar un producto al carrito:</p>
+	<button onclick="agregarAlCarrito('Camiseta', 2000)">Agregar Camiseta</button>
+	<button onclick="agregarAlCarrito('Pantalón', 3000)">Agregar Pantalón</button>
+	<button onclick="agregarAlCarrito('Zapatos', 5000)">Agregar Zapatos</button>
+	<h2>Contenido del Carrito:</h2>
+	<div id="carrito"></div>
+    <div>
+        <button onclick="borrarCarrito()">Borrar Carrito</button>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+	<script type="text/javascript" src="./js/carrito.js"></script>
+</body>
+</html>

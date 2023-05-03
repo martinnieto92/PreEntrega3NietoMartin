@@ -1,0 +1,52 @@
+body {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+
+/* Estilos para el encabezado */
+h1 {
+	color: #333;
+	font-size: 36px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Estilos para los botones de agregar al carrito */
+button {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	margin-right: 10px;
+	padding: 10px 20px;
+}
+
+/* Estilos para el botón de borrar carrito */
+button.borrar {
+	background-color: #f44336;
+}
+
+/* Estilos para el botón de finalizar compra */
+button.comprar {
+	background-color: #4CAF50;
+}
+
+/* Estilos para el contenido del carrito */
+#carrito {
+	background-color: #f2f2f2;
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+
+/* Estilos para los elementos del carrito */
+#carrito div {
+	margin-bottom: 10px;
+}
+
+button {
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+  }
+  
