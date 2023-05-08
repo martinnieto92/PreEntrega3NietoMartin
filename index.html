@@ -12,17 +12,17 @@
     <title>Carrito de Compras</title>
 </head>
 
-<body onload="cargarCarritoDesdeLocalStorage()">
+<body>
 	<h1>Carrito de Compras</h1>
 	<p>Haga clic en un botón para agregar un producto al carrito:</p>
-	<button onclick="agregarAlCarrito('Camiseta', 2000)">Agregar Camiseta</button>
-	<button onclick="agregarAlCarrito('Pantalón', 3000)">Agregar Pantalón</button>
-	<button onclick="agregarAlCarrito('Zapatos', 5000)">Agregar Zapatos</button>
+	<button id="btnCamiseta">Agregar Camiseta</button>
+	<button id="btnPantalon">Agregar Pantalón</button>
+	<button id="btnZapatos">Agregar Zapatos</button>
 	<h2>Contenido del Carrito:</h2>
 	<div id="carrito"></div>
     <div>
-        <button onclick="borrarCarrito()">Borrar Carrito</button>
-        <button onclick="finalizarCompra()">Finalizar Compra</button>
+        <button id="btnBorrarCarrito">Borrar Carrito</button>
+        <button id="btnFinalizarCompra">Finalizar Compra</button>
     </div>
 	<script type="text/javascript" src="./js/carrito.js"></script>
 </body>

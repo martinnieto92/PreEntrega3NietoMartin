@@ -1,10 +1,24 @@
 // Creamos un array para almacenar los productos en el carrito
-var carrito = [];
+let carrito = [];
+
+// Obtenemos los botones
+let camisetaBtn = document.querySelector('#camiseta-btn');
+let pantalonBtn = document.querySelector('#pantalon-btn');
+let zapatosBtn = document.querySelector('#zapatos-btn');
+
+// Añadimos los listeners a los botones
+document.getElementById("btnCamiseta").addEventListener('click', () => agregarAlCarrito('Camiseta', 2000));
+document.getElementById("btnPantalon").addEventListener('click', () => agregarAlCarrito('Pantalón', 3000));
+document.getElementById("btnZapatos").addEventListener('click', () => agregarAlCarrito('Zapatos', 5000));
+document.getElementById("btnBorrarCarrito").addEventListener('click', borrarCarrito);
+document.getElementById("btnFinalizarCompra").addEventListener('click', finalizarCompra);
+
+
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(nombre, precio) {
 	// Creamos un objeto para representar el producto
-	var producto = {
+	let producto = {
 		nombre: nombre,
 		precio: precio
 	};
@@ -19,12 +33,12 @@ function agregarAlCarrito(nombre, precio) {
 // Función para actualizar el contenido del carrito en el DOM
 function actualizarCarrito() {
 	// Obtenemos la referencia al elemento HTML que muestra el contenido del carrito
-	var carritoElemento = document.getElementById("carrito");
+	let carritoElemento = document.getElementById("carrito");
 	// Limpiamos el contenido anterior del elemento
 	carritoElemento.innerHTML = "";
 	// Recorremos el array del carrito y creamos un nuevo elemento HTML para cada producto
-	for (var i = 0; i < carrito.length; i++) {
-		var productoElemento = document.createElement("div");
+	for (let i = 0; i < carrito.length; i++) {
+		let productoElemento = document.createElement("div");
 		productoElemento.innerHTML = carrito[i].nombre + " - $" + carrito[i].precio;
 		carritoElemento.appendChild(productoElemento);
 	}
@@ -39,7 +53,7 @@ function guardarCarritoEnLocalStorage() {
 // Función para cargar el contenido del carrito desde localStorage
 function cargarCarritoDesdeLocalStorage() {
 	// Obtenemos el contenido del carrito desde localStorage
-	var carritoJSON = localStorage.getItem("carrito");
+    let carritoJSON = localStorage.getItem("carrito");
 	// Si hay contenido en localStorage, lo convertimos de JSON a un objeto y lo asignamos al array del carrito
 	if (carritoJSON) {
 		carrito = JSON.parse(carritoJSON);
@@ -61,10 +75,12 @@ function borrarCarrito() {
 // Función para finalizar la compra
 function finalizarCompra() {
 	// Calculamos la suma total de los productos en el carrito
-	var total = 0;
-	for (var i = 0; i < carrito.length; i++) {
+	let total = 0;
+	for (let i = 0; i < carrito.length; i++) {
 		total += carrito[i].precio;
 	}
 	// Mostramos el resultado en una ventana emergente
 	alert("El total de su compra es $" + total);
 }
+
+// C
