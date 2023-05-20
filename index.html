@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.all.min.js" integrity="sha512-2JsZvEefv9GpLmJNnSW3w/hYlXEdvCCfDc+Rv7ExMFHV9JNlJ2jaM+uVVlCI1MAQMkUG8K83LhsHYx1Fr2+MuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Carrito de Compras</title>
 </head>
 
 <body>
-	<h1>Carrito de Compras</h1>
-	<p>Haga clic en un botón para agregar un producto al carrito:</p>
-	<button id="btnCamiseta">Agregar Camiseta</button>
-	<button id="btnPantalon">Agregar Pantalón</button>
-	<button id="btnZapatos">Agregar Zapatos</button>
-	<h2>Contenido del Carrito:</h2>
-	<div id="carrito"></div>
-    <div>
-        <button id="btnBorrarCarrito">Borrar Carrito</button>
-        <button id="btnFinalizarCompra">Finalizar Compra</button>
+    <div class="container">
+      <h1 class="text-center mt-4">Carrito de Compras</h1>
+      <p class="text-center">Haga clic en una imagen para agregar un producto al carrito:</p>
+  
+      <div class="row" id="libros">
+      </div>
+  
+      <h2 class="text-center mt-4">Contenido del Carrito:</h2>
+      <div id="carrito"></div>
+      <div class="text-center mt-4">
+        <button id="btnBorrarCarrito" class="btn btn-danger">Borrar Carrito</button>
+        <button id="btnFinalizarCompra" class="btn btn-success">Finalizar Compra</button>
+      </div>
     </div>
-	<script type="text/javascript" src="./js/carrito.js"></script>
-</body>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.all.min.js"
+      integrity="sha512-2JsZvEefv9GpLmJNnSW3w/hYlXEdvCCfDc+Rv7ExMFHV9JNlJ2jaM+uVVlCI1MAQMkUG8K83LhsHYx1Fr2+MuA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/carrito.js"></script>
+  </body>
+
 </html>

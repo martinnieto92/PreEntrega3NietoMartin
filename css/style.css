@@ -48,5 +48,13 @@ button {
     border-radius: 5px;
     text-align: center;
     margin: 10px;
-  }
-  
+}
+
+.product {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.product:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
